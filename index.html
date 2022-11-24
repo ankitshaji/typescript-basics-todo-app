@@ -7,8 +7,14 @@
     <title>Typescript ToDo List</title>
   </head>
   <body>
-    <input type="text" id="todoinput" placeholder="Enter a task to be done" />
-    <button id="btn">Click Me!</button>
+    <!--(http structured) GET request form-->
+    <!--action attribute - default root endpoint - relative endpoint of webApi/server to send form data to-->
+    <!--method attribute - default GET - form data sent via ?queryString-->
+    <form id="todoform" action="">
+      <input type="text" id="todoinput" placeholder="Enter a task to be done" />
+      <!--type attribute - default submit - form specific button to send form data-->
+      <button id="btn" type="submit">Click Me!</button>
+    </form>
     <!--self created app.js file-->
     <!--clientside js for browser to execute-->
     <!--GET request to our lite-server app/webApi/server-->
