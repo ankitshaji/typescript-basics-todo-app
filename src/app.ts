@@ -15,8 +15,14 @@ function handleSubmitCallback(e: SubmitEvent): void {
   const newTodoText = input.value;
   //liElementObject:HTMLLIElement = documentObject.syncWebApiMethod("elementName")
   const newLi = document.createElement("li");
+  //inputElementObject:HTMLInputElement = documentObject.syncWebApiMethod("elementName")
+  const newCheckbox = document.createElement("input");
+  //inputElementObject.property
+  newCheckbox.type = "checkbox";
   //liElementObject.syncMethod("stringObject")
   newLi.append(newTodoText);
+  //liElementObject.syncMethod(elementObject)
+  newLi.append(newCheckbox);
   //ulElementObject explicit optional operator.syncMethod(elementObject)
   ul?.append(newLi);
   //inputElementObject.property
