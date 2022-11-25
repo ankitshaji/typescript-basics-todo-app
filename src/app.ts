@@ -2,8 +2,5 @@
 const btn = document.getElementById("btn")!;
 //inputElementObject = documentObject.syncWebApiMethod("css id selector")explicit type assertion
 const input = document.getElementById("todoinput") as HTMLInputElement;
-//buttonElementObject.asyncWebApiMethod("clickEventString",normalAnonymousFunctionExpressionDefinitionCallback(parameter-clickEventObject))
-btn.addEventListener("click", function (e) {
-  window.alert(input.value);
-  input.value = "";
-});
+//formElementObject = documentObject.syncWebApiMethod("css element selector")non null assertion
+const form = document.querySelector("form")!;
