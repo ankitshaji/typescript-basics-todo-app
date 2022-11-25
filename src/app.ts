@@ -1,3 +1,8 @@
+interface TodoObjectInterface {
+  text: string;
+  completed: boolean;
+}
+
 //buttonElementObject:HTMLElement = documentObject.syncWebApiMethod("css id selector")non-null assertion operator
 const btn = document.getElementById("btn")!;
 //inputElementObject:HTMLInputElement = documentObject.syncWebApiMethod("css id selector")explicit type assertion
