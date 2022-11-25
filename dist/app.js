@@ -5,3 +5,9 @@ const btn = document.getElementById("btn");
 const input = document.getElementById("todoinput");
 //formElementObject = documentObject.syncWebApiMethod("css element selector")non null assertion
 const form = document.querySelector("form");
+//formElementObject.asyncWebApiMethod("submitEventString",inline normalAnonymousFunctionExpressionDefinitionCallback(parameter that accepts argument submitEventObject))
+form.addEventListener("submit", function (e) {
+    //submitEventObject.syncWebApimethod()
+    e.preventDefault();
+    console.log("Submitted");
+});
