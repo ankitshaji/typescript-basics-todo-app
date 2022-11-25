@@ -11,4 +11,14 @@ const ul = document.getElementById("todolist");
 form.addEventListener("submit", function (e) {
     //submitEventObject.syncWebApimethod()
     e.preventDefault();
+    //inputElementObject.property
+    const newTodoText = input.value;
+    //liElementObject:HTMLLIElement = documentObject.syncWebApiMethod("elementName")
+    const newLi = document.createElement("li");
+    //liElementObject.syncMethod("stringObject")
+    newLi.append(newTodoText);
+    //ulElementObject explicit optional operator.syncMethod(elementObject)
+    ul === null || ul === void 0 ? void 0 : ul.append(newLi);
+    //inputElementObject.property
+    input.value = "";
 });

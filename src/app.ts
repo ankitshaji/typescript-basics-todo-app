@@ -8,7 +8,17 @@ const form = document.querySelector("form")!;
 const ul = document.getElementById("todolist");
 
 //formElementObject.asyncWebApiMethod("submitEventString",inline normalAnonymousFunctionExpressionDefinitionCallback(parameter that accepts argument submitEventObject))
-form.addEventListener("submit", function (e) {
+form.addEventListener("submit", function (e): void {
   //submitEventObject.syncWebApimethod()
   e.preventDefault();
+  //inputElementObject.property
+  const newTodoText = input.value;
+  //liElementObject:HTMLLIElement = documentObject.syncWebApiMethod("elementName")
+  const newLi = document.createElement("li");
+  //liElementObject.syncMethod("stringObject")
+  newLi.append(newTodoText);
+  //ulElementObject explicit optional operator.syncMethod(elementObject)
+  ul?.append(newLi);
+  //inputElementObject.property
+  input.value = "";
 });
