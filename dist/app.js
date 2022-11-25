@@ -7,8 +7,8 @@ const input = document.getElementById("todoinput");
 const form = document.querySelector("form");
 //ulElementObject:HTMLElement = documentObject.syncWebApiMethod("css element selector")
 const ul = document.getElementById("todolist");
-//formElementObject.asyncWebApiMethod("submitEventString",inline normalAnonymousFunctionExpressionDefinitionCallback(parameter that accepts argument submitEventObject))
-form.addEventListener("submit", function (e) {
+//non-inline namedFunctionExpressionDefenitionCallback(parameter that accepts argument submitEventObject)
+function handleSubmitCallback(e) {
     //submitEventObject.syncWebApimethod()
     e.preventDefault();
     //inputElementObject.property
@@ -21,4 +21,6 @@ form.addEventListener("submit", function (e) {
     ul === null || ul === void 0 ? void 0 : ul.append(newLi);
     //inputElementObject.property
     input.value = "";
-});
+}
+//formElementObject.asyncWebApiMethod("submitEventString",non-inline namedFunctionExpressionDefenitionCallback(parameter that accepts argument submitEventObject))
+form.addEventListener("submit", handleSubmitCallback);
