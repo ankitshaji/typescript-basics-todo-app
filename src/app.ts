@@ -1,7 +1,10 @@
+//declaring the TodoObjectInterface
 interface TodoObjectInterface {
   text: string;
   completed: boolean;
 }
+//declaring a variable that stores reference to arrayObject instance
+const myVarTodoObjectArrayObject: TodoObjectInterface[] = [];
 
 //buttonElementObject:HTMLElement = documentObject.syncWebApiMethod("css id selector")non-null assertion operator
 const btn = document.getElementById("btn")!;

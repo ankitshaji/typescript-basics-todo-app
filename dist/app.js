@@ -1,4 +1,6 @@
 "use strict";
+//declaring a variable that stores reference to arrayObject instance
+const myVarTodoObjectArrayObject = [];
 //buttonElementObject:HTMLElement = documentObject.syncWebApiMethod("css id selector")non-null assertion operator
 const btn = document.getElementById("btn");
 //inputElementObject:HTMLInputElement = documentObject.syncWebApiMethod("css id selector")explicit type assertion
