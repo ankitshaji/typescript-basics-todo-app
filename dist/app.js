@@ -36,6 +36,8 @@ function createElements(myParTodoObject) {
     newCheckbox.addEventListener("change", function (e) {
         //todoObject.property= inputElementObject.property
         myParTodoObject.completed = newCheckbox.checked;
+        //localStorageObject.syncMethod("key","value"-jsonObject.syncMethod(jsObject/arrayInstanceObject))
+        window.localStorage.setItem("todos", JSON.stringify(myVarTodoObjectArrayObject));
     });
     //liElementObject.syncMethod(myParTodoObject.property = "stringObject")
     newLi.append(myParTodoObject.text);
