@@ -11,7 +11,7 @@ const myVarTodoObjectArrayObject: TodoObjectInterface[] = retriveTodos();
 const btn = document.getElementById("btn")!;
 //inputElementObject:HTMLInputElement = documentObject.syncWebApiMethod("css id selector")explicit type assertion
 const input = document.getElementById("todoinput") as HTMLInputElement;
-//formElementObject:HTMLFormElement = documentObject.syncWebApiMethod("css element selector")non null assertion
+//formElementObject:HTMLFormElement = documentObject.syncWebApiMethod("css element selector")non-null assertion operator
 const form = document.querySelector("form")!;
 //ulElementObject:HTMLElement = documentObject.syncWebApiMethod("css element selector")
 const ul = document.getElementById("todolist");
@@ -51,8 +51,10 @@ function createElements(myParTodoObject: TodoObjectInterface): void {
   const newCheckbox = document.createElement("input");
   //inputElementObject.property
   newCheckbox.type = "checkbox";
+  //inputElementObject.property = todoObject.property
+  newCheckbox.checked = myParTodoObject.completed;
   //inputElementObject.asyncWebApiMethod("changeEventString",inline normalAnonymousFunctionExpressionDefinitionCallback(parameter-changeEventObject))
-  newCheckbox.addEventListener("change", function (e) {
+  newCheckbox.addEventListener("change", function (e): void {
     //todoObject.property= inputElementObject.property
     myParTodoObject.completed = newCheckbox.checked;
     //namedFunctionObject() execution
