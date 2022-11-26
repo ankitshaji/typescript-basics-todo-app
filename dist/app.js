@@ -1,6 +1,6 @@
 "use strict";
-//declaring a variable that stores reference to arrayObject instance
-const myVarTodoObjectArrayObject = [];
+//declaring a variable that stores reference to arrayObject instance returned from a namedFunctionExpressionDefenition execution
+const myVarTodoObjectArrayObject = retriveTodos();
 //buttonElementObject:HTMLElement = documentObject.syncWebApiMethod("css id selector")non-null assertion operator
 const btn = document.getElementById("btn");
 //inputElementObject:HTMLInputElement = documentObject.syncWebApiMethod("css id selector")explicit type assertion
@@ -9,6 +9,18 @@ const input = document.getElementById("todoinput");
 const form = document.querySelector("form");
 //ulElementObject:HTMLElement = documentObject.syncWebApiMethod("css element selector")
 const ul = document.getElementById("todolist");
+//(hoisted up to top of scope)
+//namedFunctionExpressionDefenition(no parameter)
+function retriveTodos() {
+    //arrayObjectJsonStringObject = localStorageObject.syncMethod("key")
+    const myVarTodosObjectArrayObjectJsonStringObject = window.localStorage.getItem("todos");
+    //type narrowing process check
+    if (myVarTodosObjectArrayObjectJsonStringObject === null)
+        return [];
+    //implcit type annotation solidified
+    //jsonObject.syncMethod(arrayObjectJsonStringObject/jsonStringObject))
+    return window.JSON.parse(myVarTodosObjectArrayObjectJsonStringObject);
+}
 //(hoisted up to top of scope)
 //namedFunctionExpressionDefenition(parameter that accepts argument todoObject)
 function createElements(myParTodoObject) {
