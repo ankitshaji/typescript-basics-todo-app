@@ -4,7 +4,7 @@ interface TodoObjectInterface {
   completed: boolean;
 }
 
-//declaring a variable that stores reference to arrayObject instance returned from a namedFunctionExpressionDefenition execution
+//declaring a variable that stores reference to arrayObject instance returned from a namedFunctionObject() execution
 const myVarTodoObjectArrayObject: TodoObjectInterface[] = retriveTodos();
 
 //buttonElementObject:HTMLElement = documentObject.syncWebApiMethod("css id selector")non-null assertion operator
@@ -15,6 +15,9 @@ const input = document.getElementById("todoinput") as HTMLInputElement;
 const form = document.querySelector("form")!;
 //ulElementObject:HTMLElement = documentObject.syncWebApiMethod("css element selector")
 const ul = document.getElementById("todolist");
+
+//arrayInstanceObject.syncMethod(non-inline namedFunctionObjectCallback)
+myVarTodoObjectArrayObject.forEach(createElements);
 
 //(hoisted up to top of scope)
 //namedFunctionExpressionDefenition(no parameter)
@@ -59,7 +62,7 @@ function handleSubmitCallback(e: SubmitEvent): void {
     text: input.value,
     completed: false,
   };
-  //namedFunctionExpressionDefenition(todoObject)
+  //namedFunctionObject(todoObject) execution
   createElements(newTodoObject);
   //arrayInstanceObject.syncMethod(todoObject)
   myVarTodoObjectArrayObject.push(newTodoObject);
@@ -70,5 +73,5 @@ function handleSubmitCallback(e: SubmitEvent): void {
   );
 }
 
-//formElementObject.asyncWebApiMethod("submitEventString",non-inline namedFunctionExpressionDefenitionCallback(parameter that accepts argument submitEventObject))
+//formElementObject.asyncWebApiMethod("submitEventString",non-inline namedFunctionObjectCallback(parameter that accepts argument submitEventObject))
 form.addEventListener("submit", handleSubmitCallback);
