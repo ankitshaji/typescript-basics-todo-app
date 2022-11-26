@@ -9,6 +9,7 @@ const input = document.getElementById("todoinput");
 const form = document.querySelector("form");
 //ulElementObject:HTMLElement = documentObject.syncWebApiMethod("css element selector")
 const ul = document.getElementById("todolist");
+//(hoisted up to top of scope)
 //namedFunctionExpressionDefenition(parameter that accepts argument todoObject)
 function createElements(myParTodoObject) {
     //liElementObject:HTMLLIElement = documentObject.syncWebApiMethod("elementName")
@@ -26,6 +27,7 @@ function createElements(myParTodoObject) {
     //inputElementObject.property
     input.value = "";
 }
+//(hoisted up to top of scope)
 //non-inline namedFunctionExpressionDefenitionCallback(parameter that accepts argument submitEventObject)
 function handleSubmitCallback(e) {
     //submitEventObject.syncWebApimethod()
@@ -38,7 +40,10 @@ function handleSubmitCallback(e) {
     };
     //namedFunctionExpressionDefenition(todoObject)
     createElements(newTodoObject);
+    //arrayInstanceObject.syncMethod(todoObject)
     myVarTodoObjectArrayObject.push(newTodoObject);
+    //localStorageObject.syncMethod("key","value"-jsonObject.syncMethod(jsObject/arrayInstanceObject))
+    window.localStorage.setItem("todos", JSON.stringify(myVarTodoObjectArrayObject));
 }
 //formElementObject.asyncWebApiMethod("submitEventString",non-inline namedFunctionExpressionDefenitionCallback(parameter that accepts argument submitEventObject))
 form.addEventListener("submit", handleSubmitCallback);
