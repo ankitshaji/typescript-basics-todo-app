@@ -32,6 +32,11 @@ function createElements(myParTodoObject) {
     const newCheckbox = document.createElement("input");
     //inputElementObject.property
     newCheckbox.type = "checkbox";
+    //inputElementObject.asyncWebApiMethod("changeEventString",inline normalAnonymousFunctionExpressionDefinitionCallback(parameter-changeEventObject))
+    newCheckbox.addEventListener("change", function (e) {
+        //todoObject.property= inputElementObject.property
+        myParTodoObject.completed = newCheckbox.checked;
+    });
     //liElementObject.syncMethod(myParTodoObject.property = "stringObject")
     newLi.append(myParTodoObject.text);
     //liElementObject.syncMethod(elementObject)
