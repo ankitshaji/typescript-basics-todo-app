@@ -33,6 +33,16 @@ function retriveTodos(): TodoObjectInterface[] {
 }
 
 //(hoisted up to top of scope)
+//namedFunctionExpressionDefenition(no parameter)
+function storeTodos(): void {
+  //localStorageObject.syncMethod("key","value"-jsonObject.syncMethod(jsObject/arrayInstanceObject))
+  window.localStorage.setItem(
+    "todos",
+    JSON.stringify(myVarTodoObjectArrayObject)
+  );
+}
+
+//(hoisted up to top of scope)
 //namedFunctionExpressionDefenition(parameter that accepts argument todoObject)
 function createElements(myParTodoObject: TodoObjectInterface): void {
   //liElementObject:HTMLLIElement = documentObject.syncWebApiMethod("elementName")
@@ -45,11 +55,8 @@ function createElements(myParTodoObject: TodoObjectInterface): void {
   newCheckbox.addEventListener("change", function (e) {
     //todoObject.property= inputElementObject.property
     myParTodoObject.completed = newCheckbox.checked;
-    //localStorageObject.syncMethod("key","value"-jsonObject.syncMethod(jsObject/arrayInstanceObject))
-    window.localStorage.setItem(
-      "todos",
-      JSON.stringify(myVarTodoObjectArrayObject)
-    );
+    //namedFunctionObject() execution
+    storeTodos();
   });
   //liElementObject.syncMethod(myParTodoObject.property = "stringObject")
   newLi.append(myParTodoObject.text);
@@ -76,11 +83,8 @@ function handleSubmitCallback(e: SubmitEvent): void {
   createElements(newTodoObject);
   //arrayInstanceObject.syncMethod(todoObject)
   myVarTodoObjectArrayObject.push(newTodoObject);
-  //localStorageObject.syncMethod("key","value"-jsonObject.syncMethod(jsObject/arrayInstanceObject))
-  window.localStorage.setItem(
-    "todos",
-    JSON.stringify(myVarTodoObjectArrayObject)
-  );
+  //namedFunctionObject() execution
+  storeTodos();
 }
 
 //formElementObject.asyncWebApiMethod("submitEventString",non-inline namedFunctionObjectCallback(parameter that accepts argument submitEventObject))
